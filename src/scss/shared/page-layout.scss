@@ -1,0 +1,22 @@
+body {
+  height: 100vh;
+  max-width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+section,
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 24px 36px;
+}
