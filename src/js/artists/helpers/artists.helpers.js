@@ -1,31 +1,65 @@
 export function createArtistBioElement(bio) {
-  const artistNameElement = document.createElement("p");
-  const artistNameElementTextNode = document.createTextNode(bio);
-  artistNameElement.appendChild(artistNameElementTextNode);
-  return artistNameElement;
+  const artistBioElement = document.createElement("div");
+  artistBioElement.setAttribute("class", "artist-bio");
+
+  const artistBioElementHeader = document.createElement("h3");
+  const artistBioElementHeaderTextNode = document.createTextNode(`📝 Bio`);
+  artistBioElementHeader.appendChild(artistBioElementHeaderTextNode);
+
+  const artistBioElementParagraph = document.createElement("p");
+  const artistBioElementParagraphTextNode = document.createTextNode(bio);
+  artistBioElementParagraph.appendChild(artistBioElementParagraphTextNode);
+
+  artistBioElement.appendChild(artistBioElementHeader);
+  artistBioElement.appendChild(artistBioElementParagraph);
+  return artistBioElement;
 }
 
 export function createArtistNameElement(artistName) {
-  const artistNameElement = document.createElement("h2");
-  const artistNameElementTextNode = document.createTextNode(artistName);
-  artistNameElement.appendChild(artistNameElementTextNode);
+  const artistNameElement = document.createElement("div");
+  artistNameElement.setAttribute("class", "artist-name");
+
+  const artistNameElementHeader = document.createElement("h2");
+  const artistNameElementHeaderTextNode = document.createTextNode(artistName);
+
+  artistNameElementHeader.appendChild(artistNameElementHeaderTextNode);
+
+  artistNameElement.appendChild(artistNameElementHeader);
   return artistNameElement;
 }
 
 export function createArtistShortNameElement(artistShortName) {
-  const artistShortNameElement = document.createElement("span");
-  const artistShortNameElementTextNode =
+  const artistShortNameElement = document.createElement("div");
+  artistShortNameElement.setAttribute("class", "artist-short-name");
+
+  const artistShortNameParagraph = document.createElement("p");
+  const artistShortNameParagraphTextNode =
     document.createTextNode(artistShortName);
-  artistShortNameElement.appendChild(artistShortNameElementTextNode);
+
+  artistShortNameParagraph.appendChild(artistShortNameParagraphTextNode);
+
+  artistShortNameElement.appendChild(artistShortNameParagraph);
   return artistShortNameElement;
 }
 
 export function createArtistReknownNameElement(artistReknownName) {
-  const artistReknownNameElement = document.createElement("p");
-  const artistReknownNameElementTextNode =
+  const artistReknowElement = document.createElement("div");
+  artistReknowElement.setAttribute("class", "artist-reknow");
+
+  const artistReknownNameParagraph = document.createElement("p");
+  const artistReknownNameParagraphTextNode =
     document.createTextNode(artistReknownName);
-  artistReknownNameElement.appendChild(artistReknownNameElementTextNode);
-  return artistReknownNameElement;
+
+  artistReknownNameParagraph.appendChild(artistReknownNameParagraphTextNode);
+
+  artistReknowElement.appendChild(artistReknownNameParagraph);
+  return artistReknowElement;
+}
+
+export function createArtistElement() {
+  const artistElement = document.createElement("div");
+  artistElement.setAttribute("class", "artist");
+  return artistElement;
 }
 
 export function getArtistCardComponents(artist) {
