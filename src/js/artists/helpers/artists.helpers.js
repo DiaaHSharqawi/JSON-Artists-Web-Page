@@ -27,3 +27,19 @@ export function createArtistReknownNameElement(artistReknownName) {
   artistReknownNameElement.appendChild(artistReknownNameElementTextNode);
   return artistReknownNameElement;
 }
+
+export function getArtistCardComponents(artist) {
+  const artistNameElement = createArtistNameElement(artist.name);
+  const artistShortNameElement = createArtistShortNameElement(artist.shortname);
+  const artistReknownNameElement = createArtistReknownNameElement(
+    artist.reknown
+  );
+  const artistBioElement = createArtistBioElement(artist.bio);
+  const artistElementsComponent = [
+    artistNameElement,
+    artistShortNameElement,
+    artistReknownNameElement,
+    artistBioElement,
+  ];
+  return artistElementsComponent;
+}
